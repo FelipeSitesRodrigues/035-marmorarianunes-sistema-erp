@@ -10,7 +10,8 @@
     "db": "node scripts/db-local.mjs",
     "migrar": "node scripts/migrar.mjs",
     "testar": "node scripts/testar-regras.mjs",
-    "pedras": "node scripts/preparar-pedras.mjs"
+    "pedras": "node scripts/preparar-pedras.mjs",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
@@ -27,6 +28,7 @@
     "embedded-postgres": "^17.10.0-beta.17",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.8",
+    "patch-package": "^8.0.1",
     "puppeteer-core": "^25.12.0",
     "sharp": "^0.35.5",
     "typescript": "^5.9.3"
