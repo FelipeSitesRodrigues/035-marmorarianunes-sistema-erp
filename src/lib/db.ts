@@ -16,7 +16,10 @@ import postgres from 'postgres'
 const globalDb = globalThis as unknown as { nunesSql?: postgres.Sql }
 
 function conectar() {
-  const url = process.env.DATABASE_URL
+  // Pooler do Supabase sempre no modo sessão (5432). No modo transação (6543)
+  // consultas em paralelo na mesma conexão ficam presas no banco (ClientRead)
+  // e a página nunca responde. Visto na Vercel em 2026-10-06.
+  const url = process.env.DATABASE_URL?.replace('.pooler.supabase.com:6543/', '.pooler.supabase.com:5432/')
   if (!url) throw new Error('DATABASE_URL não configurada')
   return postgres(url, {
     prepare: false,

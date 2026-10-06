@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server'
+import { LOGIN_DESLIGADO } from './lib/login-desligado'
 
 /*
  * Filtro rápido: sem o cookie de sessão, qualquer tela vai pra /entrar.
@@ -12,7 +13,7 @@ export function proxy(request: NextRequest) {
   const caminho = request.nextUrl.pathname
   const temCookie = request.cookies.has(COOKIE_SESSAO)
 
-  if (!temCookie && caminho !== '/entrar') {
+  if (!LOGIN_DESLIGADO && !temCookie && caminho !== '/entrar') {
     return NextResponse.redirect(new URL('/entrar', request.url), 303)
   }
 

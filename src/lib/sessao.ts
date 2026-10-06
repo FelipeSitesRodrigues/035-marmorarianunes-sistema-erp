@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { createHash, randomBytes } from 'node:crypto'
 import { sql } from './db'
+import { LOGIN_DESLIGADO } from './login-desligado'
 
 /*
  * Sessão da Val.
@@ -39,6 +40,12 @@ export async function criarSessao(usuarioId: string) {
 
 /** Quem está logado neste request, ou null. Uma consulta por request (cache). */
 export const usuarioAtual = cache(async (): Promise<Usuario | null> => {
+  if (LOGIN_DESLIGADO) {
+    const [primeira] = await sql<Usuario[]>`
+      select id, nome, email from nunes.usuarios where ativo order by criado_em limit 1
+    `
+    return primeira ?? null
+  }
   const token = (await cookies()).get(COOKIE_SESSAO)?.value
   if (!token) return null
   const hash = hashDe(token)
