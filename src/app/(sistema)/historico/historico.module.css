@@ -1,0 +1,138 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 1500px;
+}
+
+.pagina h1 {
+  font-size: clamp(2.25rem, 1.6rem + 1.6vw, 3rem);
+  font-weight: 800;
+}
+
+.ajuda {
+  margin-top: 6px;
+  max-width: 70ch;
+  color: var(--texto-suave);
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 14px;
+  padding: 16px 18px;
+}
+
+.filtros label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--grafite);
+}
+
+.busca > div {
+  position: relative;
+}
+
+.busca svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  translate: 0 -50%;
+  width: 20px;
+  height: 20px;
+  color: var(--texto-suave);
+}
+
+.busca input {
+  padding-left: 44px;
+}
+
+.periodo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.filtrosBotoes {
+  display: flex;
+  gap: 8px;
+}
+
+.tipos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tipos a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1.5px solid var(--veio-forte);
+  border-radius: 999px;
+  background: var(--branco);
+  font-weight: 500;
+}
+
+.tipos a:hover {
+  border-color: var(--grafite);
+}
+
+.tipos a[aria-current] {
+  border-color: var(--grafite);
+  background: var(--grafite);
+  color: #fff;
+}
+
+.lista {
+  padding: 6px 18px 12px;
+}
+
+.dia {
+  padding: 16px 4px 6px;
+  font-family: var(--ff-texto);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--texto-suave);
+  border-bottom: 1px solid var(--veio);
+}
+
+.vazio {
+  padding: 24px;
+  color: var(--texto-suave);
+}
+
+.paginas {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1099px) {
+  .filtros {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .busca {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .filtros {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+
+  .filtrosBotoes > * {
+    flex: 1;
+  }
+
+  .lista {
+    padding: 4px 14px 10px;
+  }
+}

@@ -1,0 +1,309 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1300px;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.topo h1 {
+  font-size: clamp(2.25rem, 1.6rem + 1.6vw, 3rem);
+  font-weight: 800;
+}
+
+.titulo {
+  margin-top: 4px;
+  font-size: 1.25rem;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
+.abas {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--papel-fundo);
+}
+
+.abas a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 9px;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.abas a[aria-current] {
+  background: var(--branco);
+  color: var(--grafite);
+  box-shadow: var(--sombra);
+}
+
+.navegar {
+  display: inline-flex;
+  align-items: stretch;
+  height: 52px;
+  border: 1px solid var(--veio);
+  border-radius: 10px;
+  background: var(--branco);
+}
+
+.navegar a {
+  display: grid;
+  place-items: center;
+  width: 48px;
+}
+
+.navegar a:hover {
+  background: var(--papel);
+}
+
+.navegar a svg {
+  width: 18px;
+  height: 18px;
+}
+
+.navegar span {
+  display: grid;
+  place-items: center;
+  padding: 0 16px;
+  border-inline: 1px solid var(--veio);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hoje {
+  font-weight: 600;
+  color: var(--vermelho);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.secao {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.cartoes > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 16px 18px;
+}
+
+.cartoes dt {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.cartoes dd {
+  margin: 0;
+  font-family: var(--ff-titulo);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--grafite);
+  white-space: nowrap;
+}
+
+.cartoes .verde {
+  color: var(--verde);
+}
+
+.cartoes .detalhe {
+  font-family: var(--ff-texto);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--texto-suave);
+  white-space: normal;
+}
+
+.saldo {
+  background-color: #f3f2ef;
+  background-image:
+    linear-gradient(180deg, rgb(255 255 255 / 40%), rgb(255 255 255 / 20%)),
+    url('/textura/marmore.webp');
+  background-size: cover;
+}
+
+.saldo dd[data-negativo] {
+  color: var(--ambar);
+}
+
+.bloco {
+  padding: 18px 20px 20px;
+}
+
+.bloco h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.explica {
+  margin: -4px 0 10px;
+  color: var(--texto-suave);
+}
+
+.vazio {
+  color: var(--texto-suave);
+}
+
+.destaques {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.destaques li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--papel);
+}
+
+.posicao {
+  font-family: var(--ff-titulo);
+  font-variant-numeric: lining-nums;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--vermelho);
+}
+
+.destaques strong {
+  display: block;
+  font-weight: 600;
+  color: var(--grafite);
+}
+
+.destaques small {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.rolar {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+.tabela th,
+.tabela td {
+  padding: 10px 10px;
+  text-align: left;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.tabela thead th {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+  border-bottom: 1px solid var(--veio);
+}
+
+.tabela tbody th {
+  font-weight: 600;
+  color: var(--grafite);
+}
+
+.tabela tbody th a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tabela tbody tr + tr > * {
+  border-top: 1px solid var(--veio);
+}
+
+.tabela tfoot > tr > * {
+  border-top: 1.5px solid var(--veio-forte);
+  font-weight: 700;
+  color: var(--grafite);
+}
+
+@media (max-width: 1199px) {
+  .cartoes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .topo {
+    flex-direction: column;
+  }
+
+  .cartoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cartoes dd {
+    font-size: 1.25rem;
+  }
+
+  .destaques {
+    grid-template-columns: 1fr;
+  }
+
+  .navegar {
+    width: 100%;
+  }
+
+  .navegar span {
+    flex: 1;
+  }
+
+  .bloco {
+    padding: 16px;
+  }
+}
+
+@media print {
+  .controles,
+  .topo :global(.botao) {
+    display: none;
+  }
+
+  .cartoes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bloco,
+  .cartoes > div {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .rolar {
+    overflow: visible;
+  }
+}

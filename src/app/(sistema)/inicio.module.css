@@ -1,0 +1,639 @@
+/* Início: o mockup aprovado (tela 1). */
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 1500px;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.topo h1 {
+  font-size: clamp(2.25rem, 1.4rem + 2.2vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.data {
+  margin-top: 4px;
+  font-size: 1.25rem;
+  color: var(--texto);
+}
+
+.tituloSecao {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Cinco ações */
+.acoes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.acao {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 14px 36px 14px 16px;
+  border: 1px solid var(--veio);
+  border-radius: var(--raio);
+  background: var(--branco);
+  box-shadow: var(--sombra);
+  transition:
+    border-color 0.18s var(--ease),
+    box-shadow 0.18s var(--ease),
+    transform 0.18s var(--ease);
+}
+
+.acao:hover {
+  border-color: var(--vermelho-borda);
+  box-shadow: var(--sombra-media);
+  transform: translateY(-2px);
+}
+
+.acao:active {
+  transform: translateY(0);
+}
+
+.acao :global(.selo) {
+  width: 52px;
+  height: 52px;
+}
+
+.acao :global(.selo) svg {
+  width: 28px;
+  height: 28px;
+}
+
+.acaoTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.acaoTexto strong {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--grafite);
+  line-height: 1.2;
+}
+
+.acaoTexto span {
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  color: var(--texto-suave);
+}
+
+.seta {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--grafite);
+}
+
+.acao .seta {
+  position: absolute;
+  right: 16px;
+  bottom: 22px;
+}
+
+/* Três blocos */
+.blocos {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.mes {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* A assinatura: mármore branco cortado pela diagonal vermelha da logo */
+.marmore {
+  position: relative;
+  flex: 1;
+  padding: 22px 26px 22px;
+  background-color: #f3f2ef;
+  background-image:
+    linear-gradient(180deg, rgb(255 255 255 / 30%), rgb(255 255 255 / 10%)),
+    url('/textura/marmore.webp');
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.marmore::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -84px;
+  right: 34px;
+  width: 52px;
+  height: 280px;
+  /* A faixa vermelha do N da logo (public/textura/fita.webp), com sombra de dobra nas bordas */
+  background-color: var(--vermelho);
+  background-image:
+    linear-gradient(90deg, rgb(40 0 4 / 38%), rgb(40 0 4 / 0%) 24%, rgb(255 255 255 / 9%) 52%, rgb(40 0 4 / 0%) 76%, rgb(40 0 4 / 40%)),
+    url('/textura/fita.webp');
+  background-size: 100% 100%, cover;
+  transform: rotate(-45deg);
+  box-shadow: -3px 6px 14px rgb(60 0 6 / 32%);
+}
+
+/* A aba branca do mockup, por cima do mármore */
+.mesTitulo {
+  display: inline-block;
+  margin-left: -26px;
+  padding: 8px 18px 8px 26px;
+  border-radius: 0 12px 12px 0;
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 2px 8px rgb(22 23 26 / 6%);
+  font-size: 1.5rem;
+}
+
+.saldoRotulo {
+  margin-top: 22px;
+  font-size: 1.25rem;
+  color: var(--texto);
+}
+
+.saldo {
+  font-family: var(--ff-titulo);
+  font-variant-numeric: lining-nums proportional-nums;
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 1.6rem + 2.4vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--grafite);
+}
+
+.saldo[data-negativo] {
+  color: var(--ambar);
+}
+
+.caixa {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  gap: 10px 20px;
+  margin: 20px 0 0;
+}
+
+.caixa > div {
+  display: contents;
+}
+
+.caixa dt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1875rem;
+}
+
+.caixa dt svg {
+  width: 26px;
+  height: 26px;
+  color: var(--texto-suave);
+}
+
+.caixa .sobe {
+  color: var(--verde);
+}
+
+.caixa dd {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--grafite);
+}
+
+.caixa .entrou {
+  color: var(--verde);
+}
+
+.mesNumeros {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--veio);
+}
+
+.mesNumeros > div {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 10px;
+  align-items: center;
+  padding: 12px 14px 14px;
+}
+
+.mesNumeros > div + div {
+  border-left: 1px solid var(--veio);
+}
+
+.mesNumeros :global(.selo) {
+  grid-row: span 2;
+  width: 38px;
+  height: 38px;
+}
+
+.mesNumeros :global(.selo) svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mesNumeros dt {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.mesNumeros dd {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--grafite);
+  line-height: 1.25;
+}
+
+.mesNumeros small {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--texto-suave);
+}
+
+/* Contas e estoque */
+.bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 18px 18px;
+}
+
+.bloco :global(.selo) {
+  width: 44px;
+  height: 44px;
+}
+
+.bloco :global(.selo) svg {
+  width: 22px;
+  height: 22px;
+}
+
+.blocoTopo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.blocoTopo h2 {
+  font-size: 1.5rem;
+}
+
+.blocoTopo svg {
+  width: 18px;
+  height: 18px;
+  color: var(--grafite);
+}
+
+.blocoTopo:hover h2 {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 5px;
+}
+
+/* As duas contas crescem até o fim do cartão: sem vazio acima do link */
+.conta {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--veio);
+  border-radius: var(--raio);
+  transition: border-color 0.18s var(--ease);
+}
+
+.conta:hover {
+  border-color: var(--veio-forte);
+}
+
+.contaTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contaRotulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+.contaNome {
+  white-space: nowrap;
+}
+
+.contaRotulo :global(.etiqueta) {
+  padding: 2px 10px;
+  font-size: 0.9375rem;
+}
+
+.contaTexto strong {
+  font-family: var(--ff-titulo);
+  font-variant-numeric: lining-nums proportional-nums;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  color: var(--grafite);
+}
+
+.contaTexto small {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.blocoLink {
+  margin-top: 2px;
+}
+
+.estoqueNumeros {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 14px;
+  margin: 0;
+}
+
+.estoqueNumeros > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.estoqueNumeros > div:first-child dd {
+  order: -1;
+}
+
+.estoqueNumeros > div + div {
+  padding-left: 14px;
+  border-left: 1px solid var(--veio);
+}
+
+.estoqueNumeros dt {
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  color: var(--texto-suave);
+}
+
+.estoqueNumeros dd {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--grafite);
+}
+
+.estoqueNumeros .pequeno {
+  font-size: 0.9375rem;
+}
+
+.repor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  white-space: nowrap;
+  font-size: 0.9375rem;
+  border-radius: 10px;
+  background: var(--ambar-claro);
+  border: 1px solid var(--ambar-borda);
+  color: var(--ambar);
+  font-weight: 600;
+}
+
+.repor svg:first-child {
+  width: 20px;
+  height: 20px;
+}
+
+.repor .seta {
+  margin-left: auto;
+  color: var(--ambar);
+}
+
+.reporLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reporLista li + li a {
+  border-top: 1px solid var(--veio);
+}
+
+.reporLista a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 0;
+}
+
+.reporLista a:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.reporLista strong {
+  display: block;
+  font-weight: 600;
+  color: var(--grafite);
+}
+
+.reporLista small {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.tudoCerto {
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--papel);
+  color: var(--texto-suave);
+  font-size: 0.9375rem;
+}
+
+.ultimas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 20px;
+}
+
+.ultimas > ul {
+  margin: 4px 0 8px;
+}
+
+/* Telas médias (abaixo de 1200): ações em 3 + 2, blocos em duas colunas.
+   Até 1200 fica tudo numa fileira: 1366x768 é a tela comum de computador de loja. */
+@media (max-width: 1199px) {
+  .acoes {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .acoes li {
+    grid-column: span 2;
+  }
+
+  .acoes li:nth-child(4),
+  .acoes li:nth-child(5) {
+    grid-column: span 3;
+  }
+
+  .blocos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mes {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+  .acao {
+    padding: 12px 30px 12px 14px;
+  }
+
+  .acaoTexto strong {
+    font-size: 1.0625rem;
+  }
+
+  .acaoTexto span {
+    font-size: 0.9375rem;
+  }
+
+  .acao .seta {
+    right: 12px;
+  }
+
+  .contaTexto strong {
+    font-size: 1.375rem;
+  }
+
+  /* Rodapé do saldo estreito: sai o ícone, fica o número inteiro */
+  .mesNumeros > div {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 12px 12px 14px;
+  }
+
+  .mesNumeros :global(.selo) {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .topo {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .data {
+    font-size: 1.0625rem;
+  }
+
+  .acoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .acoes li,
+  .acoes li:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .acoes li:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  .acao {
+    padding: 14px 32px 14px 14px;
+    gap: 8px;
+  }
+
+  .acao :global(.selo) {
+    width: 46px;
+    height: 46px;
+  }
+
+  .acao :global(.selo) svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .acaoTexto strong {
+    font-size: 1.0625rem;
+  }
+
+  .acaoTexto span {
+    font-size: 0.9375rem;
+  }
+
+  .acao .seta {
+    right: 12px;
+    bottom: auto;
+    top: 22px;
+  }
+
+  .blocos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .marmore {
+    padding: 18px 18px 20px;
+  }
+
+  .marmore::after {
+    right: 14px;
+    width: 34px;
+  }
+
+  .mesNumeros {
+    grid-template-columns: 1fr;
+  }
+
+  .mesNumeros > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--veio);
+  }
+
+  .bloco,
+  .ultimas {
+    padding: 16px;
+  }
+}

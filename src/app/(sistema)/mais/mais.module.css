@@ -1,0 +1,49 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 640px;
+}
+
+.pagina h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+
+.lista li + li a {
+  border-top: 1px solid var(--veio);
+}
+
+.lista a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+}
+
+.lista a > span:nth-child(2) {
+  flex: 1;
+}
+
+.lista strong {
+  display: block;
+  font-size: 1.0625rem;
+  color: var(--grafite);
+}
+
+.lista small {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.lista a > svg {
+  width: 16px;
+  height: 16px;
+}

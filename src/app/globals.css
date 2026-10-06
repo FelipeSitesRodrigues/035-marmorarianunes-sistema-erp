@@ -1,0 +1,427 @@
+/*
+ * Sistema da Marmoraria Nunes. Direção: o mockup aprovado em
+ * sites/035 - Marmoraria Nunes Irecê/sistema/mockup/tela-1-inicio.png
+ *
+ * Menu em mármore escuro, área de trabalho clara, cartões brancos.
+ * Vermelho Nunes só na marca, no item ativo e na ação principal.
+ * Aviso é âmbar (o vermelho da marca nunca avisa problema), dinheiro que
+ * entrou é verde, dinheiro que saiu é grafite com sinal de menos.
+ * Playfair (a serifada da marca) só em título e nos valores grandes;
+ * Archivo em tudo que se lê e se clica.
+ */
+
+:root {
+  --vermelho: #b01522;
+  --vermelho-escuro: #8e1019;
+  --vermelho-claro: #fbecee;
+  --vermelho-borda: #f1cfd3;
+
+  --grafite: #16171a;
+  --texto: #2e2c29;
+  --texto-suave: #5d5952;
+  --papel: #f6f5f2;
+  --papel-fundo: #efede8;
+  --branco: #ffffff;
+  --veio: #e8e5df;
+  --veio-forte: #d4cfc6;
+
+  --verde: #1e7a4c;
+  --verde-claro: #e8f3ec;
+  --verde-borda: #c9e3d3;
+  --ambar: #9a5f0c;
+  --ambar-claro: #fbf1de;
+  --ambar-borda: #f0dcb2;
+  --neutro-claro: #f0eeea;
+
+  --menu: #121212;
+  --menu-texto: #f4f2ee;
+  --menu-suave: #aaa59c;
+
+  --raio: 12px;
+  --raio-p: 8px;
+  --sombra: 0 1px 2px rgb(22 23 26 / 4%), 0 6px 18px rgb(22 23 26 / 5%);
+  --sombra-media: 0 2px 6px rgb(22 23 26 / 6%), 0 14px 32px rgb(22 23 26 / 8%);
+  --sombra-alta: 0 24px 64px rgb(22 23 26 / 22%);
+
+  --ff-titulo: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --ff-texto: var(--font-archivo), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-saida: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --menu-largura: 252px;
+  --altura-barra: 72px;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--texto);
+  font-family: var(--ff-texto);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-titulo);
+  font-weight: 700;
+  color: var(--grafite);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+/* Valor em Playfair: algarismos alinhados, como no mockup (a Playfair vem com os antigos) */
+.numero-titulo {
+  font-family: var(--ff-titulo);
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--vermelho-claro);
+  color: var(--vermelho-escuro);
+}
+
+:focus-visible {
+  outline: 3px solid rgb(176 21 34 / 45%);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+input,
+textarea {
+  caret-color: var(--vermelho);
+}
+
+/* Barra de rolagem discreta, no tom da pedra */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--veio-forte) transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * Botões
+ * ------------------------------------------------------------------------- */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 10px;
+  border: 1px solid var(--veio-forte);
+  background: var(--branco);
+  color: var(--grafite);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  white-space: nowrap;
+  transition:
+    background-color 0.18s var(--ease),
+    border-color 0.18s var(--ease),
+    transform 0.12s var(--ease),
+    box-shadow 0.18s var(--ease);
+}
+
+.botao:hover {
+  border-color: var(--grafite);
+}
+
+.botao:active {
+  transform: translateY(1px);
+}
+
+.botao svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+}
+
+.botao-principal {
+  background: var(--vermelho);
+  border-color: var(--vermelho);
+  color: var(--branco);
+  box-shadow: 0 1px 2px rgb(142 16 25 / 25%), 0 6px 16px rgb(176 21 34 / 18%);
+}
+
+.botao-principal:hover {
+  background: var(--vermelho-escuro);
+  border-color: var(--vermelho-escuro);
+}
+
+.botao[disabled],
+.botao[aria-disabled='true'] {
+  cursor: not-allowed;
+  background: var(--neutro-claro);
+  border-color: var(--veio);
+  color: #8a857c;
+  box-shadow: none;
+  transform: none;
+}
+
+.botao-pequeno {
+  min-height: 40px;
+  padding: 0 14px;
+  font-size: 0.9375rem;
+  border-radius: 8px;
+  gap: 6px;
+}
+
+.botao-pequeno svg {
+  width: 18px;
+  height: 18px;
+}
+
+.botao-largo {
+  width: 100%;
+}
+
+.link-acao {
+  font-variant-numeric: lining-nums proportional-nums;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--vermelho);
+  font-family: var(--ff-titulo);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  text-underline-offset: 4px;
+}
+
+.link-acao:hover {
+  text-decoration: underline;
+}
+
+.link-acao svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Cartão e etiquetas
+ * ------------------------------------------------------------------------- */
+
+.cartao {
+  background: var(--branco);
+  border: 1px solid var(--veio);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: nowrap;
+  background: var(--neutro-claro);
+  color: var(--texto);
+}
+
+.etiqueta svg {
+  width: 16px;
+  height: 16px;
+}
+
+.etiqueta-verde {
+  background: var(--verde-claro);
+  color: var(--verde);
+}
+
+.etiqueta-ambar {
+  background: var(--ambar-claro);
+  color: var(--ambar);
+}
+
+.etiqueta-vermelha {
+  background: var(--vermelho-claro);
+  color: var(--vermelho-escuro);
+}
+
+.etiqueta-pedra {
+  background: #f4ede2;
+  color: #6a5435;
+}
+
+.etiqueta-cinza {
+  background: var(--neutro-claro);
+  color: var(--texto-suave);
+}
+
+/* Círculo vermelho-claro com ícone vermelho (botões de ação, cartões) */
+.selo {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--vermelho-claro);
+  color: var(--vermelho);
+}
+
+.selo svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Miniatura da pedra: a Val reconhece pela textura antes de ler */
+.pedra {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--neutro-claro);
+  box-shadow: inset 0 0 0 1px rgb(22 23 26 / 8%);
+}
+
+.pedra-icone {
+  display: grid;
+  place-items: center;
+  color: var(--texto-suave);
+}
+
+.pedra-icone svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Campos de formulário
+ * ------------------------------------------------------------------------- */
+
+.entrada {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid var(--veio-forte);
+  border-radius: 10px;
+  background: var(--branco);
+  color: var(--grafite);
+  font-size: 1.0625rem;
+  transition:
+    border-color 0.15s var(--ease),
+    box-shadow 0.15s var(--ease);
+}
+
+.entrada::placeholder {
+  color: #77726a;
+}
+
+.entrada:hover {
+  border-color: #b9b3a8;
+}
+
+.entrada:focus {
+  outline: none;
+  border-color: var(--vermelho);
+  box-shadow: 0 0 0 3px rgb(176 21 34 / 14%);
+}
+
+.entrada[aria-invalid='true'] {
+  border-color: var(--ambar);
+  box-shadow: 0 0 0 3px rgb(154 95 12 / 14%);
+}
+
+textarea.entrada {
+  min-height: 88px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+input[type='date'].entrada {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------------------
+ * Movimento: só o que comunica estado, e nada pra quem pediu menos movimento
+ * ------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+}

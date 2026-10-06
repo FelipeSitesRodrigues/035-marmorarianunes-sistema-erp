@@ -1,0 +1,26 @@
+# dependências e build
+/node_modules
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# segredos (DATABASE_URL, senha do banco)
+.env*
+
+# Postgres local de desenvolvimento (npm run db)
+/.db-local/
+
+# prints de revisão e backups baixados
+/revisao/
+/.impeccable/review/
+/backups/
+
+.vercel
+.DS_Store
+*.pem
+npm-debug.log*
+
+# logs do banco e do servidor locais
+/.db-local.log
+/.dev.log

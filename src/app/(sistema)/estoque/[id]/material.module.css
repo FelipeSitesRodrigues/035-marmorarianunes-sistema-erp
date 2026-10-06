@@ -1,0 +1,264 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  min-height: 40px;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.voltar:hover {
+  color: var(--grafite);
+}
+
+.voltar svg {
+  width: 16px;
+  height: 16px;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.topo :global(.pedra) {
+  border-radius: 12px;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.titulo h1 {
+  font-size: clamp(2rem, 1.5rem + 1.6vw, 2.75rem);
+  font-weight: 800;
+}
+
+.titulo p {
+  font-size: 1.125rem;
+  color: var(--texto-suave);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.numeros > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+}
+
+.numeros dt {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.numeros dd {
+  margin: 0;
+  font-family: var(--ff-titulo);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--grafite);
+  line-height: 1.2;
+}
+
+.numeros dd span {
+  font-family: var(--ff-texto);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--texto-suave);
+}
+
+.numeros dd[data-baixo] {
+  color: var(--ambar);
+}
+
+.observacao {
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--branco);
+  border: 1px solid var(--veio);
+}
+
+.historico {
+  padding: 20px 20px 10px;
+}
+
+.historico h2 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.vazio {
+  padding: 12px 0 16px;
+  color: var(--texto-suave);
+}
+
+.movimentos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movimentos li + li .movimento {
+  border-top: 1px solid var(--veio);
+}
+
+.movimento {
+  display: grid;
+  grid-template-columns: 70px 170px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-height: 52px;
+  padding: 8px 6px;
+  border-radius: 8px;
+}
+
+.movimento:hover {
+  background: var(--papel);
+}
+
+.movimento[data-riscado] .movTexto {
+  color: var(--texto-suave);
+}
+
+.movData {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.movSinal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--grafite);
+  white-space: nowrap;
+}
+
+.movSinal svg {
+  width: 16px;
+  height: 16px;
+  color: var(--texto-suave);
+}
+
+.movSinal[data-entrada] svg {
+  color: var(--verde);
+}
+
+.movTexto {
+  min-width: 0;
+}
+
+.movSaldo {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+  white-space: nowrap;
+}
+
+.arquivar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding: 16px 18px;
+  border: 1px dashed var(--veio-forte);
+  border-radius: var(--raio);
+}
+
+.arquivar p {
+  color: var(--texto-suave);
+}
+
+.arquivar[data-confirmando] {
+  border-style: solid;
+  background: var(--branco);
+}
+
+.arquivarBotoes {
+  display: flex;
+  gap: 10px;
+}
+
+.erro {
+  width: 100%;
+  color: var(--ambar);
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  .numeros {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .topo {
+    align-items: flex-start;
+  }
+
+  .topo :global(.pedra) {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .numeros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .acoes :global(.botao) {
+    flex: 1 1 calc(50% - 5px);
+  }
+
+  .movimento {
+    grid-template-columns: 56px minmax(0, 1fr);
+    grid-template-areas:
+      'data sinal'
+      'data texto'
+      'data saldo';
+    row-gap: 2px;
+  }
+
+  .movData {
+    grid-area: data;
+    align-self: start;
+    padding-top: 2px;
+  }
+
+  .movSinal {
+    grid-area: sinal;
+  }
+
+  .movTexto {
+    grid-area: texto;
+  }
+
+  .movSaldo {
+    grid-area: saldo;
+  }
+}

@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T16:04:46.490Z",
+  "title": "Design System: Sistema Marmoraria Nunes",
+  "extensions": {
+    "colorMeta": {
+      "vermelho": {
+        "role": "primary",
+        "displayName": "Vermelho Nunes",
+        "canonical": "#b01522",
+        "oklch": "oklch(48.5% 0.185 24.8)",
+        "tonalRamp": [
+          "oklch(15.0% 0.134 24.8)",
+          "oklch(26.4% 0.151 24.8)",
+          "oklch(37.9% 0.169 24.8)",
+          "oklch(49.3% 0.184 24.8)",
+          "oklch(60.7% 0.167 24.8)",
+          "oklch(72.1% 0.149 24.8)",
+          "oklch(83.6% 0.131 24.8)",
+          "oklch(95.0% 0.114 24.8)"
+        ]
+      },
+      "vermelho-escuro": {
+        "role": "primary",
+        "displayName": "Vermelho Dobra",
+        "canonical": "#8e1019",
+        "oklch": "oklch(41.5% 0.158 25.1)",
+        "tonalRamp": [
+          "oklch(15.0% 0.123 25.1)",
+          "oklch(26.4% 0.138 25.1)",
+          "oklch(37.9% 0.153 25.1)",
+          "oklch(49.3% 0.148 25.1)",
+          "oklch(60.7% 0.133 25.1)",
+          "oklch(72.1% 0.117 25.1)",
+          "oklch(83.6% 0.102 25.1)",
+          "oklch(95.0% 0.087 25.1)"
+        ]
+      },
+      "vermelho-claro": {
+        "role": "primary",
+        "displayName": "Rosa Selo",
+        "canonical": "#fbecee",
+        "oklch": "oklch(95.5% 0.016 8.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 8.2)",
+          "oklch(26.4% 0.007 8.2)",
+          "oklch(37.9% 0.009 8.2)",
+          "oklch(49.3% 0.010 8.2)",
+          "oklch(60.7% 0.012 8.2)",
+          "oklch(72.1% 0.013 8.2)",
+          "oklch(83.6% 0.015 8.2)",
+          "oklch(95.0% 0.016 8.2)"
+        ]
+      },
+      "verde": {
+        "role": "secondary",
+        "displayName": "Verde Caixa",
+        "canonical": "#1e7a4c",
+        "oklch": "oklch(51.5% 0.112 156.4)",
+        "tonalRamp": [
+          "oklch(15.0% 0.078 156.4)",
+          "oklch(26.4% 0.088 156.4)",
+          "oklch(37.9% 0.099 156.4)",
+          "oklch(49.3% 0.109 156.4)",
+          "oklch(60.7% 0.103 156.4)",
+          "oklch(72.1% 0.092 156.4)",
+          "oklch(83.6% 0.082 156.4)",
+          "oklch(95.0% 0.071 156.4)"
+        ]
+      },
+      "verde-claro": {
+        "role": "secondary",
+        "displayName": "Verde Recibo",
+        "canonical": "#e8f3ec",
+        "oklch": "oklch(95.4% 0.015 158.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 158.2)",
+          "oklch(26.4% 0.006 158.2)",
+          "oklch(37.9% 0.008 158.2)",
+          "oklch(49.3% 0.009 158.2)",
+          "oklch(60.7% 0.011 158.2)",
+          "oklch(72.1% 0.012 158.2)",
+          "oklch(83.6% 0.013 158.2)",
+          "oklch(95.0% 0.015 158.2)"
+        ]
+      },
+      "ambar": {
+        "role": "tertiary",
+        "displayName": "Âmbar Aviso",
+        "canonical": "#9a5f0c",
+        "oklch": "oklch(53.9% 0.115 67.0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.078 67.0)",
+          "oklch(26.4% 0.089 67.0)",
+          "oklch(37.9% 0.100 67.0)",
+          "oklch(49.3% 0.111 67.0)",
+          "oklch(60.7% 0.109 67.0)",
+          "oklch(72.1% 0.098 67.0)",
+          "oklch(83.6% 0.087 67.0)",
+          "oklch(95.0% 0.076 67.0)"
+        ]
+      },
+      "ambar-claro": {
+        "role": "tertiary",
+        "displayName": "Âmbar Claro",
+        "canonical": "#fbf1de",
+        "oklch": "oklch(96.1% 0.027 83.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 83.5)",
+          "oklch(26.4% 0.011 83.5)",
+          "oklch(37.9% 0.014 83.5)",
+          "oklch(49.3% 0.017 83.5)",
+          "oklch(60.7% 0.019 83.5)",
+          "oklch(72.1% 0.022 83.5)",
+          "oklch(83.6% 0.024 83.5)",
+          "oklch(95.0% 0.027 83.5)"
+        ]
+      },
+      "ambar-borda": {
+        "role": "tertiary",
+        "displayName": "Borda Âmbar",
+        "canonical": "#f0dcb2",
+        "oklch": "oklch(90.0% 0.059 85.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.022 85.5)",
+          "oklch(26.4% 0.028 85.5)",
+          "oklch(37.9% 0.033 85.5)",
+          "oklch(49.3% 0.039 85.5)",
+          "oklch(60.7% 0.045 85.5)",
+          "oklch(72.1% 0.050 85.5)",
+          "oklch(83.6% 0.056 85.5)",
+          "oklch(95.0% 0.057 85.5)"
+        ]
+      },
+      "grafite": {
+        "role": "neutral",
+        "displayName": "Grafite Pedra",
+        "canonical": "#16171a",
+        "oklch": "oklch(20.5% 0.006 271.1)",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 271.1)",
+          "oklch(26.4% 0.006 271.1)",
+          "oklch(37.9% 0.005 271.1)",
+          "oklch(49.3% 0.005 271.1)",
+          "oklch(60.7% 0.004 271.1)",
+          "oklch(72.1% 0.003 271.1)",
+          "oklch(83.6% 0.003 271.1)",
+          "oklch(95.0% 0.002 271.1)"
+        ]
+      },
+      "texto": {
+        "role": "neutral",
+        "displayName": "Tinta Quente",
+        "canonical": "#2e2c29",
+        "oklch": "oklch(29.4% 0.006 78.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 78.2)",
+          "oklch(26.4% 0.006 78.2)",
+          "oklch(37.9% 0.006 78.2)",
+          "oklch(49.3% 0.005 78.2)",
+          "oklch(60.7% 0.004 78.2)",
+          "oklch(72.1% 0.004 78.2)",
+          "oklch(83.6% 0.003 78.2)",
+          "oklch(95.0% 0.003 78.2)"
+        ]
+      },
+      "texto-suave": {
+        "role": "neutral",
+        "displayName": "Pó de Granito",
+        "canonical": "#5d5952",
+        "oklch": "oklch(46.6% 0.012 81.8)",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 81.8)",
+          "oklch(26.4% 0.010 81.8)",
+          "oklch(37.9% 0.011 81.8)",
+          "oklch(49.3% 0.012 81.8)",
+          "oklch(60.7% 0.011 81.8)",
+          "oklch(72.1% 0.010 81.8)",
+          "oklch(83.6% 0.008 81.8)",
+          "oklch(95.0% 0.007 81.8)"
+        ]
+      },
+      "papel": {
+        "role": "neutral",
+        "displayName": "Papel da Bancada",
+        "canonical": "#f6f5f2",
+        "oklch": "oklch(97.0% 0.004 91.4)",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 91.4)",
+          "oklch(26.4% 0.002 91.4)",
+          "oklch(37.9% 0.002 91.4)",
+          "oklch(49.3% 0.002 91.4)",
+          "oklch(60.7% 0.003 91.4)",
+          "oklch(72.1% 0.003 91.4)",
+          "oklch(83.6% 0.004 91.4)",
+          "oklch(95.0% 0.004 91.4)"
+        ]
+      },
+      "branco": {
+        "role": "neutral",
+        "displayName": "Branco Cartão",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(26.4% 0.000 0)",
+          "oklch(37.9% 0.000 0)",
+          "oklch(49.3% 0.000 0)",
+          "oklch(60.7% 0.000 0)",
+          "oklch(72.1% 0.000 0)",
+          "oklch(83.6% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "veio": {
+        "role": "neutral",
+        "displayName": "Veio Claro",
+        "canonical": "#e8e5df",
+        "oklch": "oklch(92.3% 0.009 84.6)",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 84.6)",
+          "oklch(26.4% 0.004 84.6)",
+          "oklch(37.9% 0.005 84.6)",
+          "oklch(49.3% 0.006 84.6)",
+          "oklch(60.7% 0.006 84.6)",
+          "oklch(72.1% 0.007 84.6)",
+          "oklch(83.6% 0.008 84.6)",
+          "oklch(95.0% 0.008 84.6)"
+        ]
+      },
+      "veio-forte": {
+        "role": "neutral",
+        "displayName": "Veio Forte",
+        "canonical": "#d4cfc6",
+        "oklch": "oklch(85.6% 0.013 82.4)",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 82.4)",
+          "oklch(26.4% 0.007 82.4)",
+          "oklch(37.9% 0.008 82.4)",
+          "oklch(49.3% 0.009 82.4)",
+          "oklch(60.7% 0.011 82.4)",
+          "oklch(72.1% 0.012 82.4)",
+          "oklch(83.6% 0.013 82.4)",
+          "oklch(95.0% 0.012 82.4)"
+        ]
+      },
+      "neutro-claro": {
+        "role": "neutral",
+        "displayName": "Pedra Lavada",
+        "canonical": "#f0eeea",
+        "oklch": "oklch(95.0% 0.006 84.6)",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 84.6)",
+          "oklch(26.4% 0.002 84.6)",
+          "oklch(37.9% 0.003 84.6)",
+          "oklch(49.3% 0.004 84.6)",
+          "oklch(60.7% 0.004 84.6)",
+          "oklch(72.1% 0.005 84.6)",
+          "oklch(83.6% 0.005 84.6)",
+          "oklch(95.0% 0.006 84.6)"
+        ]
+      },
+      "menu": {
+        "role": "neutral",
+        "displayName": "Mármore Preto",
+        "canonical": "#121212",
+        "oklch": "oklch(18.2% 0.000 0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(26.4% 0.000 0)",
+          "oklch(37.9% 0.000 0)",
+          "oklch(49.3% 0.000 0)",
+          "oklch(60.7% 0.000 0)",
+          "oklch(72.1% 0.000 0)",
+          "oklch(83.6% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "menu-texto": {
+        "role": "neutral",
+        "displayName": "Giz",
+        "canonical": "#f4f2ee",
+        "oklch": "oklch(96.2% 0.006 84.6)",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 84.6)",
+          "oklch(26.4% 0.002 84.6)",
+          "oklch(37.9% 0.003 84.6)",
+          "oklch(49.3% 0.003 84.6)",
+          "oklch(60.7% 0.004 84.6)",
+          "oklch(72.1% 0.005 84.6)",
+          "oklch(83.6% 0.005 84.6)",
+          "oklch(95.0% 0.006 84.6)"
+        ]
+      },
+      "marmore-base": {
+        "role": "neutral",
+        "displayName": "Mármore Branco",
+        "canonical": "#f3f2ef",
+        "oklch": "oklch(96.1% 0.004 91.4)",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 91.4)",
+          "oklch(26.4% 0.002 91.4)",
+          "oklch(37.9% 0.002 91.4)",
+          "oklch(49.3% 0.003 91.4)",
+          "oklch(60.7% 0.003 91.4)",
+          "oklch(72.1% 0.003 91.4)",
+          "oklch(83.6% 0.004 91.4)",
+          "oklch(95.0% 0.004 91.4)"
+        ]
+      },
+      "areia": {
+        "role": "neutral",
+        "displayName": "Areia de Obra",
+        "canonical": "#f4ede2",
+        "oklch": "oklch(94.9% 0.016 79.4)",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 79.4)",
+          "oklch(26.4% 0.007 79.4)",
+          "oklch(37.9% 0.009 79.4)",
+          "oklch(49.3% 0.010 79.4)",
+          "oklch(60.7% 0.012 79.4)",
+          "oklch(72.1% 0.013 79.4)",
+          "oklch(83.6% 0.015 79.4)",
+          "oklch(95.0% 0.016 79.4)"
+        ]
+      },
+      "areia-texto": {
+        "role": "neutral",
+        "displayName": "Terra",
+        "canonical": "#6a5435",
+        "oklch": "oklch(46.1% 0.054 75.3)",
+        "tonalRamp": [
+          "oklch(15.0% 0.040 75.3)",
+          "oklch(26.4% 0.045 75.3)",
+          "oklch(37.9% 0.050 75.3)",
+          "oklch(49.3% 0.053 75.3)",
+          "oklch(60.7% 0.048 75.3)",
+          "oklch(72.1% 0.042 75.3)",
+          "oklch(83.6% 0.037 75.3)",
+          "oklch(95.0% 0.032 75.3)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Saudação \"Boa tarde, Val\" e título de cada tela."
+      },
+      "display-valor": {
+        "displayName": "Display Valor",
+        "purpose": "O saldo do mês, um por tela."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Título de seção e de cartão; 1.75rem no título do painel de registro."
+      },
+      "valor": {
+        "displayName": "Valor",
+        "purpose": "Número principal de um cartão ou conta, em Playfair com algarismos alinhados."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nome da ação no cartão, nome da pedra na lista, rótulo de pergunta."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido, descrições de movimentação, conteúdo de campo e botão."
+      },
+      "numero": {
+        "displayName": "Número",
+        "purpose": "Valores em linha e coluna, Archivo 700 com algarismos tabulares."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiquetas, ajudas, legendas e datas; o menor tamanho do sistema (15 px)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "repouso",
+        "value": "0 1px 2px rgb(22 23 26 / 4%), 0 6px 18px rgb(22 23 26 / 5%)",
+        "purpose": "Todo cartão em repouso e o seletor de mês (--sombra)."
+      },
+      {
+        "name": "erguido",
+        "value": "0 2px 6px rgb(22 23 26 / 6%), 0 14px 32px rgb(22 23 26 / 8%)",
+        "purpose": "Cartão de ação no hover, junto com a subida de 2 px (--sombra-media)."
+      },
+      {
+        "name": "por-cima",
+        "value": "0 24px 64px rgb(22 23 26 / 22%)",
+        "purpose": "Painel lateral, folha do celular, aviso de confirmação e cartão de entrar (--sombra-alta)."
+      },
+      {
+        "name": "brilho-acao",
+        "value": "0 1px 2px rgb(142 16 25 / 25%), 0 6px 16px rgb(176 21 34 / 18%)",
+        "purpose": "Botão principal vermelho."
+      },
+      {
+        "name": "brilho-acao-forte",
+        "value": "0 8px 22px rgb(176 21 34 / 35%)",
+        "purpose": "Item ativo do menu e botão Registrar da barra do celular."
+      },
+      {
+        "name": "dobra-da-fita",
+        "value": "-3px 6px 14px rgb(60 0 6 / 32%)",
+        "purpose": "Só a fita vermelha que corta o saldo do Início."
+      },
+      {
+        "name": "anel-de-foco",
+        "value": "0 0 0 3px rgb(176 21 34 / 14%)",
+        "purpose": "Halo do campo em foco; em âmbar (rgb(154 95 12 / 14%)) quando inválido."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+        "purpose": "Transições de estado: hover de cartão, borda de campo, fundo de linha (0.12 a 0.18 s)."
+      },
+      {
+        "name": "ease-saida",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Entradas: painel lateral desliza 32 px da direita em 0.26 s, folha do celular sobe 24 px em 0.24 s, aviso sobe 16 px em 0.28 s."
+      },
+      {
+        "name": "reduzir-movimento",
+        "value": "prefers-reduced-motion: reduce, duração 0.01ms",
+        "purpose": "Toda animação e transição cai a zero pra quem pediu menos movimento."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "empilhar",
+        "value": "640px",
+        "purpose": "Linha de movimentação em três fileiras; seletor de mês em largura cheia."
+      },
+      {
+        "name": "formulario-uma-coluna",
+        "value": "600px",
+        "purpose": "Perguntas e opções do painel empilham."
+      },
+      {
+        "name": "celular",
+        "value": "960px",
+        "purpose": "Sai o menu lateral, entram o topo escuro e a barra de baixo; painel em tela cheia."
+      },
+      {
+        "name": "acoes-numa-fileira",
+        "value": "1200px",
+        "purpose": "Acima disso as cinco ações ficam numa fileira só; abaixo, 3 + 2."
+      },
+      {
+        "name": "linha-cheia",
+        "value": "1280px",
+        "purpose": "Acima disso a linha de movimentação usa cinco colunas."
+      },
+      {
+        "name": "largura-maxima",
+        "value": "1500px",
+        "purpose": "Limite do conteúdo do Início; abaixo, as ações compactam o respiro."
+      }
+    ],
+    "materials": [
+      {
+        "name": "marmore-preto",
+        "value": "url('/textura/escuro.webp') 720px auto sobre #121212, com véu escurecendo pra baixo",
+        "purpose": "Casca: menu lateral, topo do celular, tela de entrar."
+      },
+      {
+        "name": "marmore-branco",
+        "value": "url('/textura/marmore.webp') cover sobre #f3f2ef, com véu branco de 10 a 30%",
+        "purpose": "Só o cartão do saldo do mês."
+      },
+      {
+        "name": "fita",
+        "value": "url('/textura/fita.webp') sobre #b01522, retângulo de 52 x 280 px girado -45 graus",
+        "purpose": "Só a faixa do saldo do Início, cortada do N da logo."
+      },
+      {
+        "name": "pedras",
+        "value": "public/pedras/<pedra>.webp em 56 px, object-fit cover",
+        "purpose": "Miniatura da textura em toda lista que cita material."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A ação que salva o registro. Um por tela ou painel.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Salvar venda</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 10px; border: 1px solid var(--vermelho, #b01522); background: var(--vermelho, #b01522); color: #fff; font-family: var(--ff-texto, Archivo, system-ui, sans-serif); font-weight: 600; font-size: 1.0625rem; box-shadow: 0 1px 2px rgb(142 16 25 / 25%), 0 6px 16px rgb(176 21 34 / 18%); cursor: pointer; transition: background-color 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), border-color 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), transform 0.12s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)); } .ds-btn-primary:hover { background: var(--vermelho-escuro, #8e1019); border-color: var(--vermelho-escuro, #8e1019); } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 3px solid rgb(176 21 34 / 45%); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão secundário",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Cancelar, fechar, imprimir: branco com borda de veio que escurece no hover.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Cancelar</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 10px; border: 1px solid var(--veio-forte, #d4cfc6); background: #fff; color: var(--grafite, #16171a); font-family: var(--ff-texto, Archivo, system-ui, sans-serif); font-weight: 600; font-size: 1.0625rem; cursor: pointer; transition: border-color 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), transform 0.12s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)); } .ds-btn-secondary:hover { border-color: var(--grafite, #16171a); } .ds-btn-secondary:active { transform: translateY(1px); } .ds-btn-secondary:focus-visible { outline: 3px solid rgb(176 21 34 / 45%); outline-offset: 2px; }"
+    },
+    {
+      "name": "Campo de dinheiro",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de 52 px com rótulo em forma de pergunta e o R$ preso dentro; foco vermelho, erro âmbar.",
+      "html": "<label class=\"ds-campo\"><span class=\"ds-campo-rotulo\">Valor total da venda</span><span class=\"ds-dinheiro\"><span>R$</span><input class=\"ds-input\" inputmode=\"decimal\" placeholder=\"0,00\"></span></label>",
+      "css": ".ds-campo { display: flex; flex-direction: column; gap: 10px; font-family: var(--ff-texto, Archivo, system-ui, sans-serif); } .ds-campo-rotulo { font-weight: 600; font-size: 1.0625rem; color: var(--grafite, #16171a); } .ds-dinheiro { position: relative; display: block; } .ds-dinheiro > span { position: absolute; left: 14px; top: 50%; translate: 0 -50%; color: var(--texto-suave, #5d5952); font-weight: 500; pointer-events: none; } .ds-input { width: 100%; box-sizing: border-box; min-height: 52px; padding: 12px 14px 12px 46px; border: 1px solid var(--veio-forte, #d4cfc6); border-radius: 10px; background: #fff; color: var(--grafite, #16171a); font: inherit; font-size: 1.0625rem; font-weight: 600; caret-color: var(--vermelho, #b01522); transition: border-color 0.15s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), box-shadow 0.15s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)); } .ds-input::placeholder { color: #77726a; font-weight: 400; } .ds-input:hover { border-color: #b9b3a8; } .ds-input:focus, .ds-input:focus-visible { outline: none; border-color: var(--vermelho, #b01522); box-shadow: 0 0 0 3px rgb(176 21 34 / 14%); } .ds-input[aria-invalid='true'] { border-color: var(--ambar, #9a5f0c); box-shadow: 0 0 0 3px rgb(154 95 12 / 14%); }"
+    },
+    {
+      "name": "Menu em mármore preto",
+      "kind": "nav",
+      "refersTo": "nav-sidebar",
+      "description": "Casca do computador: mármore preto, itens de 60 px e o ativo como aba vermelha colada na borda.",
+      "html": "<nav class=\"ds-menu\" aria-label=\"Menu\"><a class=\"ds-menu-item\" href=\"#\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M3.5 10.6L12 3.5l8.5 7.1V20.5h-6v-6h-5v6h-6z\"/></svg>Início</a><a class=\"ds-menu-item\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l8 4.5v9L12 21l-8-4.5v-9z\"/><path d=\"M4 7.5l8 4.5 8-4.5M12 12v9\"/></svg>Estoque</a></nav>",
+      "css": ".ds-menu { display: flex; flex-direction: column; gap: 6px; width: 252px; padding: 24px 14px 24px 0; background-color: var(--menu, #121212); background-image: linear-gradient(180deg, rgb(18 18 18 / 20%), rgb(18 18 18 / 70%) 70%, rgb(18 18 18 / 90%)), url('/textura/escuro.webp'); background-size: cover, 720px auto; font-family: var(--ff-texto, Archivo, system-ui, sans-serif); } .ds-menu-item { display: flex; align-items: center; gap: 16px; min-height: 60px; padding: 0 24px 0 30px; border-radius: 0 12px 12px 0; color: var(--menu-texto, #f4f2ee); font-size: 1.1875rem; font-weight: 500; text-decoration: none; transition: background-color 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), color 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)); } .ds-menu-item svg { flex: none; } .ds-menu-item:hover { background: rgb(255 255 255 / 7%); } .ds-menu-item[aria-current='page'] { background: linear-gradient(100deg, #b01522, #93111c); color: #fff; box-shadow: 0 8px 22px rgb(176 21 34 / 35%); } .ds-menu-item:focus-visible { outline: 3px solid rgb(255 255 255 / 70%); outline-offset: -3px; }"
+    },
+    {
+      "name": "Ficha",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Escolha rápida em cápsula de 44 px; a marcada vira vermelho cheio.",
+      "html": "<div class=\"ds-fichas\"><label class=\"ds-ficha\" data-marcada><input type=\"radio\" name=\"ds-f\" checked>Pix</label><label class=\"ds-ficha\"><input type=\"radio\" name=\"ds-f\">Dinheiro</label><label class=\"ds-ficha\"><input type=\"radio\" name=\"ds-f\">Cartão</label></div>",
+      "css": ".ds-fichas { display: flex; flex-wrap: wrap; gap: 8px; font-family: var(--ff-texto, Archivo, system-ui, sans-serif); } .ds-ficha { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1.5px solid var(--veio-forte, #d4cfc6); border-radius: 999px; background: #fff; color: var(--texto, #2e2c29); font-weight: 500; font-size: 1.0625rem; cursor: pointer; transition: border-color 0.15s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), background-color 0.15s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), color 0.15s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)); } .ds-ficha input { position: absolute; opacity: 0; pointer-events: none; } .ds-ficha:hover { border-color: #b4ada2; } .ds-ficha:has(input:focus-visible) { outline: 3px solid rgb(176 21 34 / 45%); outline-offset: 2px; } .ds-ficha[data-marcada] { border-color: var(--vermelho, #b01522); background: var(--vermelho, #b01522); color: #fff; }"
+    },
+    {
+      "name": "Etiquetas de tipo e situação",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Cápsulas de 15 px: tipo do lançamento (Venda, Saída, Compra) e situação (paga, a receber, cancelada). Âmbar avisa; o vermelho só marca a venda.",
+      "html": "<div class=\"ds-etiquetas\"><span class=\"ds-tag ds-tag-venda\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1a1 1 0 0 1 .7.3l7.4 7.4a1 1 0 0 1 0 1.4l-8.1 8.1a1 1 0 0 1-1.4 0l-7.4-7.4a1 1 0 0 1-.3-.7z\"/><circle cx=\"8\" cy=\"8\" r=\"1.4\"/></svg>Venda</span><span class=\"ds-tag ds-tag-saida\">Saída para obra</span><span class=\"ds-tag\">Compra</span><span class=\"ds-tag ds-tag-verde\">Pago no Pix</span><span class=\"ds-tag ds-tag-ambar\">A receber até 15/11</span><span class=\"ds-tag ds-tag-cinza\">Cancelado</span></div>",
+      "css": ".ds-etiquetas { display: flex; flex-wrap: wrap; gap: 8px; font-family: var(--ff-texto, Archivo, system-ui, sans-serif); } .ds-tag { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; font-size: 0.9375rem; font-weight: 500; line-height: 1.3; white-space: nowrap; background: var(--neutro-claro, #f0eeea); color: var(--texto, #2e2c29); } .ds-tag-venda { background: var(--vermelho-claro, #fbecee); color: var(--vermelho-escuro, #8e1019); } .ds-tag-saida { background: #f4ede2; color: #6a5435; } .ds-tag-verde { background: var(--verde-claro, #e8f3ec); color: var(--verde, #1e7a4c); } .ds-tag-ambar { background: var(--ambar-claro, #fbf1de); color: var(--ambar, #9a5f0c); } .ds-tag-cinza { background: var(--neutro-claro, #f0eeea); color: var(--texto-suave, #5d5952); }"
+    },
+    {
+      "name": "Cartão de ação",
+      "kind": "card",
+      "refersTo": "action-card",
+      "description": "Uma das cinco ações sempre à vista: selo vermelho, nome escrito, explicação e chevron; sobe 2 px no hover.",
+      "html": "<a class=\"ds-acao\" href=\"#\"><span class=\"ds-selo\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1a1 1 0 0 1 .7.3l7.4 7.4a1 1 0 0 1 0 1.4l-8.1 8.1a1 1 0 0 1-1.4 0l-7.4-7.4a1 1 0 0 1-.3-.7z\"/><circle cx=\"8\" cy=\"8\" r=\"1.4\"/></svg></span><span class=\"ds-acao-texto\"><strong>Registrar venda</strong><span>Vendeu pedra ou peça pra um cliente</span></span><span class=\"ds-acao-seta\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-acao { position: relative; display: flex; flex-direction: column; gap: 10px; width: 220px; padding: 14px 36px 14px 16px; border: 1px solid var(--veio, #e8e5df); border-radius: 12px; background: #fff; color: var(--grafite, #16171a); text-decoration: none; font-family: var(--ff-texto, Archivo, system-ui, sans-serif); box-shadow: 0 1px 2px rgb(22 23 26 / 4%), 0 6px 18px rgb(22 23 26 / 5%); transition: border-color 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), box-shadow 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), transform 0.18s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)); } .ds-acao:hover { border-color: #f1cfd3; box-shadow: 0 2px 6px rgb(22 23 26 / 6%), 0 14px 32px rgb(22 23 26 / 8%); transform: translateY(-2px); } .ds-acao:active { transform: translateY(0); } .ds-acao:focus-visible { outline: 3px solid rgb(176 21 34 / 45%); outline-offset: 2px; } .ds-selo { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--vermelho-claro, #fbecee); color: var(--vermelho, #b01522); } .ds-acao-texto { display: flex; flex-direction: column; gap: 4px; } .ds-acao-texto strong { font-size: 1.125rem; font-weight: 600; line-height: 1.2; } .ds-acao-texto span { font-size: 0.9375rem; line-height: 1.35; color: var(--texto-suave, #5d5952); } .ds-acao-seta { position: absolute; right: 16px; bottom: 22px; display: flex; }"
+    },
+    {
+      "name": "Opção grande",
+      "kind": "custom",
+      "refersTo": "option-card",
+      "description": "Pergunta de escolha do formulário em cartões de 64 px com bolinha; a marcada ganha borda vermelha e visto.",
+      "html": "<div class=\"ds-opcoes\"><label class=\"ds-opcao\" data-marcada><input type=\"radio\" name=\"ds-o\" checked><span class=\"ds-opcao-marca\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg></span><span class=\"ds-opcao-titulo\">Sim, saiu pedra</span></label><label class=\"ds-opcao\"><input type=\"radio\" name=\"ds-o\"><span class=\"ds-opcao-marca\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg></span><span class=\"ds-opcao-titulo\">Não, só serviço</span><span class=\"ds-opcao-desc\">Mão de obra, polimento, instalação</span></label></div>",
+      "css": ".ds-opcoes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; font-family: var(--ff-texto, Archivo, system-ui, sans-serif); } .ds-opcao { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 2px; min-height: 64px; padding: 12px 14px 12px 44px; border: 1.5px solid var(--veio-forte, #d4cfc6); border-radius: 12px; background: #fff; cursor: pointer; transition: border-color 0.15s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)), background-color 0.15s var(--ease, cubic-bezier(0.22, 0.61, 0.36, 1)); } .ds-opcao input { position: absolute; opacity: 0; pointer-events: none; } .ds-opcao:hover { border-color: #b4ada2; } .ds-opcao:has(input:focus-visible) { outline: 3px solid rgb(176 21 34 / 45%); outline-offset: 2px; } .ds-opcao[data-marcada] { border-color: var(--vermelho, #b01522); background: #fff8f8; } .ds-opcao-marca { position: absolute; left: 14px; top: 50%; translate: 0 -50%; display: grid; place-items: center; width: 22px; height: 22px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid var(--veio-forte, #d4cfc6); color: transparent; } .ds-opcao[data-marcada] .ds-opcao-marca { border-color: var(--vermelho, #b01522); background: var(--vermelho, #b01522); color: #fff; } .ds-opcao-titulo { font-weight: 600; font-size: 1.0625rem; color: var(--grafite, #16171a); line-height: 1.25; } .ds-opcao-desc { font-size: 0.9375rem; color: var(--texto-suave, #5d5952); }"
+    },
+    {
+      "name": "Saldo em mármore",
+      "kind": "custom",
+      "refersTo": "balance-card",
+      "description": "O cartão assinatura: mármore branco cortado pela fita vermelha do N, aba de título, saldo em Playfair, entrou em verde e saiu em grafite.",
+      "html": "<section class=\"ds-saldo\"><div class=\"ds-marmore\"><h2 class=\"ds-saldo-aba\">Como está outubro</h2><p class=\"ds-saldo-rotulo\">Saldo do mês</p><p class=\"ds-saldo-valor\">R$ 5.700,00</p><dl class=\"ds-caixa\"><dt class=\"ds-sobe\"><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 19V5M6 11l6-6 6 6\"/></svg><span>Entrou</span></dt><dd class=\"ds-entrou\">R$ 16.050,00</dd><dt><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M6 13l6 6 6-6\"/></svg><span>Saiu</span></dt><dd>R$ 10.350,00</dd></dl></div></section>",
+      "css": ".ds-saldo { width: 460px; overflow: hidden; border: 1px solid var(--veio, #e8e5df); border-radius: 12px; background: #fff; box-shadow: 0 1px 2px rgb(22 23 26 / 4%), 0 6px 18px rgb(22 23 26 / 5%); font-family: var(--ff-texto, Archivo, system-ui, sans-serif); color: var(--texto, #2e2c29); } .ds-marmore { position: relative; padding: 22px 26px; background-color: #f3f2ef; background-image: linear-gradient(180deg, rgb(255 255 255 / 30%), rgb(255 255 255 / 10%)), url('/textura/marmore.webp'); background-size: cover; background-position: center; isolation: isolate; overflow: hidden; } .ds-marmore::after { content: ''; position: absolute; z-index: -1; top: -84px; right: 34px; width: 52px; height: 280px; background-color: var(--vermelho, #b01522); background-image: linear-gradient(90deg, rgb(40 0 4 / 38%), rgb(40 0 4 / 0%) 24%, rgb(255 255 255 / 9%) 52%, rgb(40 0 4 / 0%) 76%, rgb(40 0 4 / 40%)); transform: rotate(-45deg); box-shadow: -3px 6px 14px rgb(60 0 6 / 32%); } .ds-saldo-aba { display: inline-block; margin: 0 0 0 -26px; padding: 8px 18px 8px 26px; border-radius: 0 12px 12px 0; background: rgb(255 255 255 / 82%); box-shadow: 0 2px 8px rgb(22 23 26 / 6%); font-family: var(--ff-titulo, 'Playfair Display', Georgia, serif); font-weight: 700; font-size: 1.5rem; color: var(--grafite, #16171a); font-variant-numeric: lining-nums proportional-nums; } .ds-saldo-rotulo { margin: 14px 0 0; font-size: 1.25rem; } .ds-saldo-valor { margin: 0; font-family: var(--ff-titulo, 'Playfair Display', Georgia, serif); font-weight: 800; font-size: 3.4rem; line-height: 1.05; letter-spacing: -0.02em; color: var(--grafite, #16171a); font-variant-numeric: lining-nums proportional-nums; white-space: nowrap; } .ds-caixa { display: grid; grid-template-columns: auto auto; justify-content: start; gap: 6px 20px; margin: 12px 0 0; } .ds-caixa dt { display: flex; align-items: center; gap: 12px; font-size: 1.1875rem; color: var(--texto-suave, #5d5952); } .ds-caixa dt span { color: var(--texto, #2e2c29); } .ds-caixa .ds-sobe { color: var(--verde, #1e7a4c); } .ds-caixa dd { margin: 0; font-size: 1.5rem; font-weight: 700; color: var(--grafite, #16171a); font-variant-numeric: tabular-nums; } .ds-caixa .ds-entrou { color: var(--verde, #1e7a4c); }"
+    },
+    {
+      "name": "Aviso de confirmação",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Cartão grafite que confirma o que mudou no estoque e no caixa, com Desfazer.",
+      "html": "<div class=\"ds-aviso\" role=\"status\"><span class=\"ds-aviso-icone\"><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"currentColor\"/><path d=\"M7.5 12.5l3 3 6-6.5\" fill=\"none\" stroke=\"#16171a\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><div class=\"ds-aviso-texto\"><strong>Venda salva.</strong><span>Verde Ubatuba agora tem 18 chapas.</span><span>Entrou R$ 2.100,00 no caixa.</span><div class=\"ds-aviso-acoes\"><button type=\"button\" class=\"ds-aviso-btn\">Desfazer</button><button type=\"button\" class=\"ds-aviso-btn\">Ver lançamento</button></div></div><button type=\"button\" class=\"ds-aviso-fechar\" aria-label=\"Fechar\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M6 6l12 12M18 6L6 18\"/></svg></button></div>",
+      "css": ".ds-aviso { display: flex; gap: 12px; width: 440px; box-sizing: border-box; padding: 16px 14px 16px 16px; border-radius: 14px; background: var(--grafite, #16171a); color: #f4f2ee; box-shadow: 0 24px 64px rgb(22 23 26 / 22%); font-family: var(--ff-texto, Archivo, system-ui, sans-serif); animation: ds-subir-aviso 0.28s cubic-bezier(0.16, 1, 0.3, 1); } @keyframes ds-subir-aviso { from { transform: translateY(16px); opacity: 0; } } @media (prefers-reduced-motion: reduce) { .ds-aviso { animation: none; } } .ds-aviso-icone { color: #5fd394; display: flex; } .ds-aviso-texto { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; } .ds-aviso-texto strong { font-size: 1.0625rem; color: #fff; } .ds-aviso-texto > span { font-size: 0.9375rem; color: #d9d5cd; } .ds-aviso-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; } .ds-aviso-btn { min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid rgb(255 255 255 / 22%); background: rgb(255 255 255 / 10%); color: #fff; font: inherit; font-weight: 600; font-size: 0.9375rem; cursor: pointer; } .ds-aviso-btn:hover { background: rgb(255 255 255 / 18%); } .ds-aviso-btn:focus-visible { outline: 3px solid rgb(176 21 34 / 45%); outline-offset: 2px; } .ds-aviso-fechar { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border: 0; border-radius: 50%; background: none; color: #d9d5cd; cursor: pointer; } .ds-aviso-fechar:hover { color: #fff; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Bancada da Val",
+    "overview": "O sistema é a bancada de atendimento da Marmoraria Nunes passada pra tela: uma superfície clara cor de papel onde a Val trabalha, emoldurada por mármore preto à esquerda, com a pedra sempre à vista. Não é planilha nem painel de indicadores. Cinco ações escritas por extenso ficam sempre ao alcance, e registrar abre um painel por cima da tela atual, sem trocar de página. Os números aparecem escritos e com rótulo do dia a dia (\"Entrou\", \"Saiu\", \"A receber\"), nunca como gráfico ou sigla.\n\nA matéria do mundo é a da loja. Mármore preto texturizado na casca (menu, topo do celular, tela de entrar), mármore branco só onde mora o saldo, e cada pedra identificada pela miniatura da própria textura antes do nome. O vermelho da letra N da logo entra em dose medida: na marca, no item ativo, na escolha marcada e na ação principal, e uma única vez como matéria, na faixa diagonal que corta o mármore do saldo no Início. O resto é papel, branco e grafite.\n\nA densidade é de ferramenta de balcão pra quem tem pouca prática digital: texto de 17 px, alvos de 44 a 60 px, opções grandes com nome escrito, contraste AA em tudo. A hierarquia vem do contraste entre a serifada da marca (Playfair Display) nos títulos e nos valores grandes e uma sem serifa de trabalho (Archivo) em tudo que se lê e se clica, não de cor.",
+    "keyCharacteristics": [
+      "Casca em mármore preto com a logo, área de trabalho cor de papel, cartões brancos com borda de veio e sombra quase ambiente.",
+      "Vermelho Nunes só pra marca e ação; âmbar avisa; verde é dinheiro que entrou; grafite é dinheiro que saiu.",
+      "Playfair nos títulos e no número grande de cada cartão, sempre com algarismos alinhados; Archivo em tudo que se lê e se clica.",
+      "Cinco ações sempre à vista e registro num painel lateral por cima da tela.",
+      "Pedra reconhecida pela textura: miniatura em toda lista que cita material."
+    ],
+    "rules": [
+      {
+        "name": "The Red Never Warns Rule",
+        "body": "O vermelho Nunes é marca, escolha e ação. Atraso, falta de estoque, erro e saldo negativo são âmbar, sempre escritos em palavra. Se algo está errado e aparece em vermelho, está errado duas vezes.",
+        "section": "colors"
+      },
+      {
+        "name": "The Money Has a Color Rule",
+        "body": "Dinheiro que entrou é verde. Dinheiro que saiu é grafite, marcado por seta pra baixo (no saldo do mês) ou pelo sinal de menos tipográfico, \"−\" (nas listas do Financeiro e na movimentação do material), nunca por vermelho. A lista de últimas movimentações do Início não leva sinal: o tipo na etiqueta já diz o sentido.",
+        "section": "colors"
+      },
+      {
+        "name": "The Marble Means Balance Rule",
+        "body": "A textura de mármore branco é reservada ao saldo do mês (Início, Financeiro e Relatórios). A faixa vermelha cortada do N da logo aparece só no saldo do Início. O mármore preto é só a casca. Cartão comum é branco liso.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lining Figures Rule",
+        "body": "A Playfair vem com algarismos antigos; todo número em Playfair leva `lining-nums proportional-nums`, e todo número em Archivo leva algarismos tabulares (é o padrão do corpo). Valor com \"5\" descendo da linha está quebrado.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Numbers Rule",
+        "body": "O número grande que resume um cartão é Playfair; o número que divide linha ou coluna com outros números é Archivo em negrito. Um cartão tem no máximo um número em Playfair de destaque.",
+        "section": "typography"
+      },
+      {
+        "name": "The Fifteen Pixel Floor Rule",
+        "body": "O corpo é 17 px (1.0625rem) e nada desce de 15 px (0.9375rem). Se não cabe a 15 px, o texto muda, o tamanho não.",
+        "section": "typography"
+      },
+      {
+        "name": "The Five Actions Rule",
+        "body": "As cinco ações de registro (venda, compra, saída, despesa, material) estão sempre à vista: em cartões no topo do Início no computador e atrás do \"Registrar\" da barra no celular. Nenhuma fica escondida em menu de três pontos.",
+        "section": "layout"
+      },
+      {
+        "name": "The Panel Over the Page Rule",
+        "body": "Registrar nunca troca de tela. O formulário abre num painel lateral de 600 px por cima do que a Val estava vendo (tela cheia no celular), e a confirmação aparece por cima também, dizendo o que mudou no estoque.",
+        "section": "layout"
+      },
+      {
+        "name": "The Paper Rests Rule",
+        "body": "Cartão fica parado e quase sem sombra. Só o cartão de ação sobe no hover (2 px, sombra Erguido). Sombra Por cima é exclusiva do que cobre a tela.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** reservar o vermelho Nunes (#b01522) pra marca, item ativo, escolha marcada, link de ação e um botão principal por tela ou painel.",
+      "**Do** escrever todo aviso em palavras e pintar em âmbar (#9a5f0c sobre #fbf1de): \"1 atrasado\", \"vence amanhã\", \"4 precisam de reposição\".",
+      "**Do** mostrar dinheiro que entrou em verde (#1e7a4c) e dinheiro que saiu em grafite (#16171a), com seta ou com o sinal \"−\" tipográfico.",
+      "**Do** ligar `lining-nums proportional-nums` em todo número em Playfair e manter algarismos tabulares nos números em Archivo.",
+      "**Do** pôr a miniatura da textura (56 px, cantos de 6 px) ao lado de toda pedra listada, e o ladrilho com ícone quando não há foto.",
+      "**Do** abrir todo registro no painel lateral de 600 px por cima da tela atual, com rodapé fixo de \"Salvar\" e \"Cancelar\", e confirmar no aviso grafite o que mudou no estoque.",
+      "**Do** manter alvos de toque de 44 px ou mais (botões e campos de 52 px, itens de menu de 60 px) e corpo de 17 px.",
+      "**Do** respeitar `prefers-reduced-motion`: só se move o que comunica estado (painel entrando, aviso subindo, cartão de ação erguendo), com a curva `cubic-bezier(0.22, 0.61, 0.36, 1)`."
+    ],
+    "donts": [
+      "**Don't** usar o vermelho da marca pra atraso, erro, falta de estoque, saldo negativo ou dinheiro que saiu.",
+      "**Don't** usar a textura de mármore branco em cartão que não seja o saldo do mês, nem repetir a fita vermelha fora do saldo do Início.",
+      "**Don't** trocar número escrito por gráfico, indicador ou sigla; o relatório é tabela com rótulo do dia a dia (\"Vendida\", \"Usada em obra\", \"Precisa repor\").",
+      "**Don't** deixar ação só com ícone; os únicos ícones sozinhos são o fechar (X) e o menos e mais da quantidade.",
+      "**Don't** usar Playfair em campo, botão, etiqueta ou texto corrido; ela é título, valor de destaque e link de ação.",
+      "**Don't** pôr texto abaixo de 15 px (0.9375rem).",
+      "**Don't** mandar a Val pra outra página pra registrar algo, nem esconder uma das cinco ações em menu."
+    ]
+  }
+}

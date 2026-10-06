@@ -1,0 +1,57 @@
+# Backup diário do sistema da Nunes (todas as tabelas do schema nunes, em JSON).
+#
+# Sai criptografado (AES-256) com a senha do segredo BACKUP_SENHA e fica 30
+# dias nos artefatos desta Action. A rodada diária também mantém o projeto
+# grátis do Supabase acordado (ele pausa depois de 7 dias sem uso).
+#
+# Segredos do repositório (Settings > Secrets and variables > Actions):
+#   BACKUP_DATABASE_URL  conexão do usuário nunes_backup (só leitura)
+#   BACKUP_SENHA         senha longa, guardada também no gerenciador de senhas
+#
+# Abrir um backup:
+#   openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in backup-AAAA-MM-DD.tar.gz.enc -out backup.tar.gz
+#   tar -xzf backup.tar.gz
+
+name: Backup do banco
+
+on:
+  schedule:
+    - cron: '41 6 * * *' # 03:41 em Irecê
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install --no-save postgres@3
+
+      - name: Copiar tabelas
+        run: node scripts/backup.mjs
+        env:
+          BACKUP_DATABASE_URL: ${{ secrets.BACKUP_DATABASE_URL }}
+
+      - name: Criptografar
+        run: |
+          arquivo="backup-$(date -u +%F).tar.gz.enc"
+          tar -czf - backup | openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -pass env:BACKUP_SENHA -out "$arquivo"
+          rm -rf backup
+          echo "ARQUIVO=$arquivo" >> "$GITHUB_ENV"
+        env:
+          BACKUP_SENHA: ${{ secrets.BACKUP_SENHA }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARQUIVO }}
+          path: ${{ env.ARQUIVO }}
+          retention-days: 30
+          if-no-files-found: error

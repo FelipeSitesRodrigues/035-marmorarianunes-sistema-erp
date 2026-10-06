@@ -1,0 +1,182 @@
+/* Linha de movimentação e seletor de mês, usados em várias telas. */
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista > li + li .linha {
+  border-top: 1px solid var(--veio);
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 172px 104px minmax(0, 1fr) 128px 196px;
+  align-items: center;
+  gap: 16px;
+  min-height: 52px;
+  padding: 8px 4px;
+  border-radius: 8px;
+  transition: background-color 0.15s var(--ease);
+}
+
+.linha:hover {
+  background: var(--papel);
+}
+
+.linha[data-riscada] .descricao,
+.linha[data-riscada] .valor {
+  color: var(--texto-suave);
+  text-decoration: line-through;
+  text-decoration-color: rgb(93 89 82 / 50%);
+}
+
+.tipo {
+  justify-self: start;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 6px 14px;
+}
+
+.quando {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+  white-space: nowrap;
+}
+
+/* Até duas linhas: o nome do cliente e da obra não podem sumir nas reticências */
+.descricao {
+  min-width: 0;
+  color: var(--texto);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.35;
+}
+
+.valor {
+  font-weight: 700;
+  color: var(--grafite);
+  white-space: nowrap;
+}
+
+.valor[data-vazio] {
+  font-weight: 400;
+  color: var(--texto-suave);
+}
+
+.situacao {
+  min-width: 0;
+}
+
+.situacao .etiqueta {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Seletor de mês */
+.seletor {
+  display: inline-flex;
+  align-items: stretch;
+  height: 52px;
+  border: 1px solid var(--veio);
+  border-radius: 10px;
+  background: var(--branco);
+  box-shadow: var(--sombra);
+}
+
+.seletor a {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  color: var(--grafite);
+}
+
+.seletor a:hover {
+  background: var(--papel);
+}
+
+.seletor a:first-child {
+  border-right: 1px solid var(--veio);
+  border-radius: 10px 0 0 10px;
+}
+
+.seletor a:last-child {
+  border-left: 1px solid var(--veio);
+  border-radius: 0 10px 10px 0;
+}
+
+.seletor a svg {
+  width: 18px;
+  height: 18px;
+}
+
+.seletor span {
+  display: grid;
+  place-items: center;
+  min-width: 170px;
+  padding: 0 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 1279px) {
+  .linha {
+    grid-template-columns: 170px minmax(0, 1fr) 130px;
+    grid-template-areas:
+      'tipo descricao valor'
+      'quando descricao situacao';
+    row-gap: 4px;
+    padding: 10px 4px;
+  }
+
+  .tipo {
+    grid-area: tipo;
+  }
+
+  .quando {
+    grid-area: quando;
+    padding-left: 4px;
+  }
+
+  .descricao {
+    grid-area: descricao;
+    white-space: normal;
+  }
+
+  .valor {
+    grid-area: valor;
+    justify-self: end;
+  }
+
+  .situacao {
+    grid-area: situacao;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 640px) {
+  .linha {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'tipo valor'
+      'descricao descricao'
+      'quando situacao';
+    row-gap: 6px;
+    padding: 12px 2px;
+  }
+
+  .seletor {
+    width: 100%;
+  }
+
+  .seletor span {
+    flex: 1;
+    min-width: 0;
+  }
+}
